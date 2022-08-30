@@ -58,13 +58,25 @@ namespace Exercicio.Models
         {
 
             if (cachorro.Nome == string.Empty || cachorro.Idade == 0 || cachorro.Raca == string.Empty)
+            {
+                Console.WriteLine("Informe os dados do cachorro");
                 return false;
+            }
+            
+
+
+
 
             else if (cachorro.NomeDoDono == string.Empty || cachorro.Email == string.Empty || cachorro.CPF == 0 || cachorro.Endereco == string.Empty)
+            {
+                Console.WriteLine("Informe os dados do dono");
                 return false;
+            }
+                
 
             else
             {
+                Console.WriteLine("Cachorro cadastrado com sucesso");
                 return true;
             }
         }

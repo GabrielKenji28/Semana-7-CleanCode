@@ -31,18 +31,27 @@ namespace Exercicio.Objetos
             gato.Endereco = Console.ReadLine();
             return gato;
         }
-        public string ValidaGato(Gato gato)
+        public bool ValidaGato(Gato gato)
         {
 
               if (gato.Nome == string.Empty || gato.Idade == 0 || gato.Raca == string.Empty)
-                  return "É obrigatório informar os dados do gato.";
+            {
+                Console.WriteLine("Informe os dados do gato");
+                return false;
+            }
+                 
         
               else if (gato.NomeDoDono == string.Empty || gato.Email == string.Empty || gato.CPF == 0 || gato.Endereco == string.Empty)
-                  return "É obrigatório informar os dados do dono do animal.";
+            {
+                Console.WriteLine("Informe os dados do gato");
+                return false;
+            }
+                  
 
             else
             {
-                return "Gato cadastrado com sucesso!";
+                Console.WriteLine("Gato cadastrado com sucesso");
+                return true;
             }
         }
     }

@@ -36,10 +36,11 @@ namespace Exercicio.Cadastro_Animal
             try
             {
                 var valido = cachorro.ValidaCachorro(cachorro);
-
+               
                 if (valido)
                 {
                     CachorroRepository.ListaCachorros.Add(cachorro);
+                    Console.WriteLine("Cachorro cadastrado com sucesso")
                     return true;
                 }
                 else
